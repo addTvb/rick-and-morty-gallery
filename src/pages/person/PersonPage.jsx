@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import moment from  'moment'
 
 import './PersonPage.css'
@@ -29,6 +29,7 @@ export const PersonPage = () => {
 					<Row title='Origin' value={character?.location.name} />
 				</div>
 			</div>
+				<Link to='/characters' className='back-link'>All characters</Link>
 		</div>
 	);
 };

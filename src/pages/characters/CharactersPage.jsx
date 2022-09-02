@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react';
-
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 import { Card } from '../../components/Card/Card';
+import { Spinner } from '../../components/Spinner/Spinner';
 
 import './CharactersPage.css';
-import { Spinner } from '../../components/Spinner/Spinner';
 
 const getCharacterLink = (character) => {
 	return `/characters:${character.id}?character=${JSON.stringify(character)}`;
@@ -36,7 +35,7 @@ export const CharactersPage = () => {
 	const getPrevPage = () => setCurrentPage(currentPage - 1);
 	return (
 		<div>
-			<div>
+			<div className='characters-count'>
 				<span>Characters count: </span>
 				<span>{characters?.info?.count}</span>
 			</div>

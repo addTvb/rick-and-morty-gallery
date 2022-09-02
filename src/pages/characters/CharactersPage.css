@@ -1,3 +1,10 @@
+.characters-count {
+	width: 100%;
+	font-size: 2rem;
+	display: flex;
+	justify-content: center;
+	margin: 20px 0;
+}
 .characters-wrapper {
 	display: flex;
 	width: 100%;
@@ -18,4 +25,8 @@
 	justify-content: center;
 	width: 100%;
 	column-gap: 10px;
+}
+
+button {
+	font-size: 1.2rem;
 }

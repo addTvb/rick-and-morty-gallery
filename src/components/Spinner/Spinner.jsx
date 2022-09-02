@@ -1,5 +1,5 @@
 import './Spinner.css'
 
 export const Spinner = () => {
-	return <div class="triple-loader"></div>;
+	return <div className="triple-loader"></div>;
 };
