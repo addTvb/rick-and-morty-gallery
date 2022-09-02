@@ -1,0 +1,44 @@
+:root {
+	--text-gray: #282828;
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+@keyframes spinBack {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(-720deg);
+	}
+}
+
+.triple-loader {
+	position: relative;
+	height: 100px;
+	width: 100px;
+	border: 4px solid transparent;
+	border-top-color: var(--text-gray);
+	border-left-color: #6a168e;
+	border-radius: 50%;
+	animation: spin 1.5s linear infinite;
+}
+.triple-loader::before {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	right: 15px;
+	bottom: 15px;
+	content: '';
+	border: 4px solid transparent;
+	border-top-color: #6a168e;
+	border-left-color: var(--text-gray);
+	border-radius: 50%;
+	animation: spinBack 1.2s linear infinite;
+}
